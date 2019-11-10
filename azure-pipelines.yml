@@ -18,7 +18,7 @@ steps:
   displayName: dotnet build
   inputs:
     command: build
-    projects: '**/*.csproj'
+    projects: 'src/Validation/Validation.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
@@ -32,7 +32,7 @@ steps:
   displayName: 'dotnet pack'
   inputs:
     command: pack
-    packagesToPack: src/Validation.csproj
+    packagesToPack: src/Validation/Validation.csproj
     packDirectory: '$(Build.ArtifactStagingDirectory)/packages'
     arguments: '--configuration $(buildConfiguration)'
     nobuild: true
