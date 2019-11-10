@@ -25,5 +25,17 @@ steps:
   displayName: dotnet test
   inputs:
     command: test
-    projects: 'tests/**/*.csproj'
+    projects: 'tests/**/Validation.Tests.csproj'
     arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  inputs:
+    command: pack
+    packagesToPack: src/Validation.csproj
+    packDirectory: '$(Build.ArtifactStagingDirectory)/packages'
+    arguments: '--configuration $(buildConfiguration)'
+    nobuild: true
+
+- publish: '$(Build.ArtifactStagingDirectory)/packages'
+  artifact: 'packages'

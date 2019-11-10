@@ -7,15 +7,16 @@
     <AssemblyTitle>Enterprise Library Validation Application Block</AssemblyTitle>
     <Product>Microsoft Enterprise Library</Product>
     <Description>The Validation Application Block provides useful features that allow developers to implement structured and easy-to-maintain validation scenarios in their applications.</Description>
-    <Version>6.0.0.0</Version>
-    <FileVersion>6.0.1311.0</FileVersion>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
     <InformationalVersion>6.0.1311-prerelease</InformationalVersion>
-    <PackageTags>entlib entlib6 Enterprise Library validation validator vab LOB futures OSS</PackageTags>
+    <PackageTags>ntlib entlib6 Enterprise Library validation validator .NET Core .NETCore dotnetcore coreclr</PackageTags>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Authors>Microsoft; Arnaud Maichac</Authors>
-    <Company>Microsoft; patterns-and-practices; Arnaud Maichac</Company>
+    <Authors>Arnaud Maichac</Authors>
+    <Company>Arnaud Maichac</Company>
     <RepositoryUrl>https://github.com/arnaudmaichac/Microsoft.Practices.EnterpriseLibrary.Validation</RepositoryUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageId>Practices.EnterpriseLibrary.Validation.Core</PackageId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -80,6 +81,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Practices.EnterpriseLibrary.Common" Version="6.0.0" />
+    <PackageReference Include="Practices.EnterpriseLibrary.Common.Core" Version="1.0.0" />
   </ItemGroup>
 </Project>
